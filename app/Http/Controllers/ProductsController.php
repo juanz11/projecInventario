@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\products;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class ProductsController extends Controller
 {
@@ -15,9 +16,9 @@ class ProductsController extends Controller
     public function index()
     {
         $productos = products::all();
-       
+        $usuarios = User::all();
 
-        return view('/inventario',array("listprod"=> $productos));
+        return view('/inventario',array("listprod"=> $productos),array("user"=> $usuarios));
     }
 
     /**

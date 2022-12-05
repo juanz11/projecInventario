@@ -53,6 +53,38 @@
                       </tbody>
                   </table>
                 </div>
-            
+
+
+                <h5> Lista de usuarios </h5>
+                <div class="table-responsive">
+                  <table class="table w-100 nowrap scroll-horizontal-vertical myTable table-striped w-100">
+                    <thead class="">
+
+                        <tr class="text-center">                           
+                         <th>ID</th>
+                         <th>NOMBRE DE USUARIO</th>
+                      
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                         
+                      @if(isset($user))
+                          @foreach ($user as $value) 
+                          <tr class="text-center">
+                                 
+                                 <td>{{$value->id }}</td>
+                                 <td>{{$value->name }}</td>
+                              
+                                
+                              </tr>   
+
+                          @endforeach
+                        @endif 
+                      
+                      </tbody>
+                  </table>
+                </div>
+
 
 </section>
