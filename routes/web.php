@@ -24,3 +24,7 @@ Route::get('/add_inventario', [ProductsController::class, 'create'])->name('crea
 
 
 Route::post('/save_product', [ProductsController::class, 'store'])->name('store.save_product');
+
+Route::get('/product_delete/{id}', [ProductsController::class, 'destroy'])->name('destroy.product_delete');
+
+
