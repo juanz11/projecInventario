@@ -1,3 +1,14 @@
+<meta charset="utf-8">
+       
+
+        <title>Inventario agregar</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+       
+
 <form method="POST" action="{{ url('/save_product') }}" enctype="multipart/form-data">
                          @csrf
 
