@@ -1,17 +1,32 @@
 <form method="POST" action="{{ url('/save_product') }}" enctype="multipart/form-data">
                          @csrf
 
-                            <div class="form-group">
+                         @error('name')
+                         <div class="alert alert-danger">
+                           Ingrese nombre de producto correcto 
+                         </div>
+                        @enderror
+                         
+                         <div class="form-group">
                                 <label class="form-label"><strong>Nombre</strong></label>
                                 <input  type="text" class="form-control " name="name" >
                             </div>    
-                           
+                          
+                            @error('description')
+                         <div class="alert alert-danger">
+                           Ingrese una description correcta 
+                         </div>
+                        @enderror
                              
                            <div class="form-group">
                                 <label class="form-label"><strong>Description del producto</strong></label>
                                 <input  type="text" class="form-control " name="description" >
                             </div>
-
+                          @error('price')
+                         <div class="alert alert-danger">
+                         El monto del producto no puede ser menor de 1
+                         </div>
+                        @enderror
                             <div class="form-group">
                                 <label class="form-label"><strong>Precio</strong></label>
                                 <input  type="city" class="form-control " name="price" >

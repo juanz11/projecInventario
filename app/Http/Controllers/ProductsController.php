@@ -38,6 +38,14 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
+        $request ->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'integer|min:1',
+  
+          ]);
+        
+        
         $data_inventario=request()->except('_token');
         
         
