@@ -1,4 +1,8 @@
 <meta charset="utf-8">
+     <style>
+     table.improviso
+     { width: 25%;text-align: left;vertical-align: top;border: 1px solid #000;border-collapse: collapse;}
+     </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Inventario</title>
@@ -19,7 +23,7 @@
                    </form>
 
                 <div class="table-responsive">
-                  <table class="table w-100 nowrap scroll-horizontal-vertical myTable table-striped w-100">
+                  <table class="table w-100 nowrap scroll-horizontal-vertical myTable table-striped w-100 improviso">
                     <thead class="">
 
                         <tr class="text-center">                           
@@ -57,13 +61,14 @@
 
                 <h5> Lista de usuarios </h5>
                 <div class="table-responsive">
-                  <table class="table w-100 nowrap scroll-horizontal-vertical myTable table-striped w-100">
+                  <table class="table w-100 nowrap scroll-horizontal-vertical myTable table-striped w-100 improviso">
                     <thead class="">
 
                         <tr class="text-center">                           
-                         <th>ID</th>
+                         <th>ID </th>
                          <th>NOMBRE DE USUARIO</th>
-                      
+                         <th>Role del usuario</th>
+                        
                           
                         </tr>
                       </thead>
@@ -75,6 +80,7 @@
                                  
                                  <td>{{$value->id }}</td>
                                  <td>{{$value->name }}</td>
+                                 <td>{{$value->role }}</td>
                               
                                 
                               </tr>   
