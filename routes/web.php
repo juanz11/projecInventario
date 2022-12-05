@@ -19,3 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('/inventario', [ProductsController::class, 'index'])->name('.index');
+
+Route::get('/add_inventario', [ProductsController::class, 'create'])->name('create');
+
+
+Route::post('/save_product', [ProductsController::class, 'store'])->name('store.save_product');

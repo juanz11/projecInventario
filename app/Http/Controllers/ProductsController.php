@@ -27,7 +27,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('/add_inventario');
     }
 
     /**
@@ -38,7 +38,12 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data_inventario=request()->except('_token');
+        
+        
+
+        products::insert($data_inventario);
+        return redirect()->back()->with('success', 'El producto se registro con exito');
     }
 
     /**
@@ -49,7 +54,7 @@ class ProductsController extends Controller
      */
     public function show(products $products)
     {
-        //
+        return view('/add_inventario');
     }
 
     /**
